@@ -1,0 +1,13 @@
+# 此文件放在部署仓库根目录（上传 yato 文件夹中的内容）。
+services:
+  - type: web
+    name: yato-server
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.9
