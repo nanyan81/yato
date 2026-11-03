@@ -1,3 +1,5 @@
+# 会变好的，嗯
+
 # やト：第一块积木
 
 第八块「本机后端」的启动、填写与迁移步骤见 [backend/README.md](backend/README.md)。
